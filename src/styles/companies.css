@@ -283,9 +283,44 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .company-hero {
-        height: 400px;
+        height: 450px;
+    }
+
+    .company-hero-overlay {
+        padding: var(--spacing-2xl);
+    }
+
+    .company-hero-content h1 {
+        font-size: var(--font-size-4xl);
+    }
+
+    .company-content {
+        padding: 0 var(--spacing-md) var(--spacing-2xl);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Company Page Mobile */
+    .company-page {
+        padding-top: 70px;
+    }
+
+    .company-hero {
+        height: 350px;
+        margin-bottom: var(--spacing-2xl);
     }
 
     .company-hero-overlay {
@@ -294,17 +329,179 @@ body {
 
     .company-hero-content h1 {
         font-size: var(--font-size-3xl);
+        line-height: 1.2;
     }
 
     .company-hero-content p {
         font-size: var(--font-size-base);
     }
 
+    /* Content Mobile */
+    .company-content {
+        padding: 0 var(--spacing-md) var(--spacing-xl);
+    }
+
+    .content-section {
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .content-section h2 {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .content-section p {
+        font-size: var(--font-size-base);
+        line-height: 1.7;
+    }
+
+    /* Features Grid Mobile */
     .features-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-lg);
+    }
+
+    .feature-card {
+        padding: var(--spacing-md);
+    }
+
+    .feature-card h3 {
+        font-size: var(--font-size-lg);
+    }
+
+    .feature-card p {
+        font-size: var(--font-size-sm);
+    }
+
+    /* Stats Grid Mobile */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+        margin: var(--spacing-lg) 0;
+    }
+
+    .stat-card {
+        padding: var(--spacing-md);
+    }
+
+    .stat-number {
+        font-size: var(--font-size-3xl);
+    }
+
+    .stat-label {
+        font-size: var(--font-size-sm);
+    }
+
+    /* Back Button Mobile */
+    .back-button {
+        padding: var(--spacing-xs) var(--spacing-md);
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* CTA Section Mobile */
+    .cta-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+        margin-top: var(--spacing-2xl);
+    }
+
+    .cta-section h2 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .cta-section p {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .cta-button {
+        padding: var(--spacing-sm) var(--spacing-xl);
+        font-size: var(--font-size-base);
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Extra Small Mobile */
+    .company-hero {
+        height: 280px;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .company-hero-overlay {
+        padding: var(--spacing-md);
+    }
+
+    .company-hero-content h1 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .company-hero-content p {
+        font-size: var(--font-size-sm);
+    }
+
+    .company-content {
+        padding: 0 var(--spacing-sm) var(--spacing-lg);
+    }
+
+    .content-section {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .content-section h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    .content-section p {
+        font-size: var(--font-size-sm);
     }
 
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .stat-number {
+        font-size: var(--font-size-2xl);
+    }
+
+    .stat-label {
+        font-size: var(--font-size-xs);
+    }
+
+    .feature-card {
+        padding: var(--spacing-sm);
+    }
+
+    .feature-card h3 {
+        font-size: var(--font-size-base);
+    }
+
+    .feature-card p {
+        font-size: var(--font-size-xs);
+    }
+
+    .cta-section {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .cta-section h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    .cta-section p {
+        font-size: var(--font-size-sm);
+    }
+
+    .cta-button {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: var(--font-size-sm);
+        width: 100%;
+    }
+
+    .back-button {
+        padding: 6px 12px;
+        font-size: var(--font-size-xs);
     }
 }
