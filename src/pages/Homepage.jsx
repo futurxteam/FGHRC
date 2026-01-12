@@ -63,6 +63,12 @@ const Homepage = () => {
             <Header />
 
             <main className="hero-section" id="home">
+                <div className="hero-video-container fade-in-up">
+                    <video autoPlay loop muted playsInline className="hero-video">
+                        <source src="/dummy-vid.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
                 <div className="hero-container">
                     <div className="hero-title fade-in-up">
                         <h1>Futureace Global Healthcare Research Centre</h1>
