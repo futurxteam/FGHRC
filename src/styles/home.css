@@ -181,6 +181,17 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   aspect-ratio: 21/9;
   /* Cinematic aspect ratio */
+  transition: all 0.5s ease-out;
+}
+
+.hero-video-container.blurred {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.hero-video-container.clear {
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  transform: scale(1);
 }
 
 .hero-video {
@@ -188,6 +199,147 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: filter 1s ease-in-out;
+}
+
+.hero-video-container.blurred .hero-video {
+  filter: blur(20px) brightness(0.4);
+  transform: scale(1.1);
+  /* Slight zoom for background feel */
+}
+
+.hero-video-container.clear .hero-video {
+  filter: blur(0) brightness(1);
+  transform: scale(1);
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.intro-text {
+  font-size: var(--font-size-5xl);
+  font-weight: 800;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  height: 1.2em;
+  /* Ensure height stability */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-text .short-text {
+  position: absolute;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: blur(0);
+}
+
+.intro-text .full-text {
+  position: absolute;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0;
+  transform: scale(0.9);
+  filter: blur(10px);
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.6em;
+  /* Smaller font for full text to fit width */
+}
+
+/* Expanded state animations */
+.intro-text.expanded .short-text {
+  opacity: 0;
+  transform: scale(1.5);
+  filter: blur(20px);
+}
+
+.intro-text.expanded .full-text {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+}
+
+/* Visibility classes */
+.invisible {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease 0.5s;
+  /* Delay fade in */
+}
+
+/* Mobile adjustments for intro */
+@media (max-width: 768px) {
+  .intro-text {
+    font-size: var(--font-size-2xl);
+    height: auto;
+    min-height: 120px;
+    /* Ensure enough height for full text */
+    width: 100%;
+    padding: 0 var(--spacing-sm);
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .intro-text .short-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    white-space: nowrap;
+  }
+
+  .intro-text.expanded .short-text {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  .intro-text .full-text {
+    font-size: 0.9rem;
+    /* Allow text to be legible */
+    white-space: normal;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    line-height: 1.5;
+    padding: 0 10px;
+    display: block;
+    /* Ensure block display for wrapping */
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text {
+    min-height: 100px;
+  }
+
+  .intro-text .full-text {
+    font-size: 0.8rem;
+  }
 }
 
 .hero-container {

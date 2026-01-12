@@ -58,24 +58,55 @@ const companies = [
 ];
 
 const Homepage = () => {
+    const [animationState, setAnimationState] = React.useState('initial'); // initial, expanding, playing
+
+    React.useEffect(() => {
+        // Start expansion after 1.5 seconds
+        const timer1 = setTimeout(() => {
+            setAnimationState('expanding');
+        }, 1500);
+
+        // Remove text and clear video after another 2.5 seconds
+        const timer2 = setTimeout(() => {
+            setAnimationState('playing');
+        }, 4000);
+
+        return () => {
+            clearTimeout(timer1);
+            clearTimeout(timer2);
+        };
+    }, []);
+
     return (
         <div className="homepage">
             <Header />
 
             <main className="hero-section" id="home">
-                <div className="hero-video-container fade-in-up">
+                <div className={`hero-video-container fade-in-up ${animationState === 'playing' ? 'clear' : 'blurred'}`}>
                     <video autoPlay loop muted playsInline className="hero-video">
                         <source src="/dummy-vid.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
+
+                    {animationState !== 'playing' && (
+                        <div className="hero-video-overlay">
+                            <h1 className={`intro-text ${animationState === 'expanding' ? 'expanded' : ''}`}>
+                                <span className="short-text">FGHRC</span>
+                                <span className="full-text">Futureace Global Healthcare Research Centre</span>
+                            </h1>
+                        </div>
+                    )}
                 </div>
+
                 <div className="hero-container">
                     <div className="hero-title fade-in-up">
-                        <h1>Futureace Global Healthcare Research Centre</h1>
-                        <p>
-                            A Health and Research Centre - Leading the future of healthcare through
-                            innovation, technology, and comprehensive services across six specialized companies
-                        </p>
+                        <div className={animationState !== 'playing' ? 'invisible' : 'visible'}>
+                            <h1>Futureace Global Healthcare Research Centre</h1>
+                            <p>
+                                A Health and Research Centre - Leading the future of healthcare through
+                                innovation, technology, and comprehensive services across six specialized companies
+                            </p>
+                        </div>
                     </div>
 
                     <div className="companies-grid" id="services">
@@ -101,11 +132,11 @@ const Homepage = () => {
                             </div>
                         ))}
                     </div>
-                </div>
-            </main>
+                </div >
+            </main >
 
             <Footer />
-        </div>
+        </div >
     );
 };
 
