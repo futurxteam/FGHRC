@@ -107,7 +107,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(10, 10, 15, 0.3), rgba(10, 10, 15, 0.9));
+    background: rgba(255, 255, 255, 0.15);
+    /* Solid semi-transparent white */
     display: flex;
     align-items: flex-end;
     padding: var(--spacing-3xl);
@@ -116,10 +117,7 @@ body {
 .company-hero-content h1 {
     font-size: var(--font-size-5xl);
     font-weight: 800;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-color);
     margin-bottom: var(--spacing-sm);
 }
 

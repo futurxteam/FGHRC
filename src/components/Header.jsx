@@ -44,7 +44,7 @@ const Header = () => {
                     </Link>
 
                     <div className="dropdown">
-                        <span className="nav-link" style={{ cursor: 'pointer' }}>Companies ▾</span>
+                        <span className="nav-link" style={{ cursor: 'pointer' }}>Conglomerates</span>
                         <div className="dropdown-content">
                             <Link to="/company/futureace-hospital" className="dropdown-item">Futureace Hospital</Link>
                             <Link to="/company/futureace-academy" className="dropdown-item">Futureace Academy</Link>

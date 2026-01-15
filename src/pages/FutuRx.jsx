@@ -44,15 +44,15 @@ const FutuRx = () => {
 
                 <div className="stats-grid">
                     <div className="stat-card">
-                        <span className="stat-number">1M+</span>
-                        <span className="stat-label">Diagnoses Assisted</span>
+                        <span className="stat-number">10+</span>
+                        <span className="stat-label">Projects Completed</span>
                     </div>
                     <div className="stat-card">
                         <span className="stat-number">95%</span>
                         <span className="stat-label">Accuracy Rate</span>
                     </div>
                     <div className="stat-card">
-                        <span className="stat-number">500+</span>
+                        <span className="stat-number">50+</span>
                         <span className="stat-label">Healthcare Partners</span>
                     </div>
                     <div className="stat-card">

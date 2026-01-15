@@ -44,8 +44,8 @@ const companies = [
     {
         id: 'sage-journey',
         name: 'Sage & Journey',
-        description: 'Building the future of healthcare infrastructure. Expert construction services specializing in medical facilities and hospitals.',
-        tag: 'Construction',
+        description: 'Strategic healthcare solutions for a better tomorrow. Expert consultancy services specializing in hospital planning and operational excellence.',
+        tag: 'Healthcare Consultancy',
         image: sageJourneyImg
     },
     {
@@ -122,7 +122,7 @@ const Homepage = () => {
                                 <div className="company-content">
                                     <h2 className="company-name">{company.name}</h2>
                                     <p className="company-description">{company.description}</p>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '1rem' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginTop: 'auto', paddingTop: '1rem' }}>
                                         <span className="company-tag">{company.tag}</span>
                                         <Link to={`/company/${company.id}`} className="btn-view">
                                             View Details

@@ -18,7 +18,7 @@ const SageJourney = () => {
                 <div className="company-hero-overlay">
                     <div className="company-hero-content">
                         <h1>Sage & Journey</h1>
-                        <p>Building the Future of Healthcare Infrastructure</p>
+                        <p>Strategic Healthcare Consultancy & Solutions</p>
                     </div>
                 </div>
             </div>
@@ -29,15 +29,14 @@ const SageJourney = () => {
                 <div className="content-section">
                     <h2>About Sage & Journey</h2>
                     <p>
-                        Sage & Journey is a premier construction company specializing in healthcare infrastructure.
-                        We design and build state-of-the-art medical facilities that combine functionality, safety,
-                        and aesthetic appeal to create healing environments for patients and efficient workspaces
-                        for healthcare professionals.
+                        Sage & Journey is a premier healthcare consultancy firm dedicated to transforming the medical landscape.
+                        We provide strategic guidance, operational optimization, and comprehensive planning services to healthcare
+                        organizations, ensuring they deliver the highest standards of care efficiently.
                     </p>
                     <p>
-                        With decades of experience in healthcare construction, we understand the unique requirements
-                        of medical facilities. From hospitals and clinics to research laboratories and rehabilitation
-                        centers, we deliver projects that meet the highest standards of quality, compliance, and innovation.
+                        With decades of experience in healthcare strategy, we understand the unique challenges of the industry.
+                        From hospitals and clinics to research institutes, we deliver solutions that streamline operations,
+                        enhance patient experience, and drive sustainable growth.
                     </p>
                 </div>
 
@@ -56,7 +55,7 @@ const SageJourney = () => {
                     </div>
                     <div className="stat-card">
                         <span className="stat-number">100%</span>
-                        <span className="stat-label">Safety Record</span>
+                        <span className="stat-label">Client Success</span>
                     </div>
                 </div>
 
@@ -64,35 +63,35 @@ const SageJourney = () => {
                     <h2>Our Expertise</h2>
                     <div className="features-grid">
                         <div className="feature-card">
-                            <h3>Hospital Construction</h3>
-                            <p>Complete hospital buildings with advanced medical infrastructure and systems.</p>
+                            <h3>Strategic Planning</h3>
+                            <p>Comprehensive roadmaps for hospital development and long-term growth.</p>
                         </div>
                         <div className="feature-card">
-                            <h3>Medical Centers</h3>
-                            <p>Outpatient clinics and specialized medical treatment facilities.</p>
+                            <h3>Operational Efficiency</h3>
+                            <p>Optimizing workflows and resource allocation for maximum efficacy.</p>
                         </div>
                         <div className="feature-card">
-                            <h3>Research Laboratories</h3>
-                            <p>State-of-the-art labs for medical research and pharmaceutical development.</p>
+                            <h3>Regulatory Compliance</h3>
+                            <p>Ensuring adherence to global healthcare standards and regulations.</p>
                         </div>
                         <div className="feature-card">
-                            <h3>Renovation & Expansion</h3>
-                            <p>Modernization of existing healthcare facilities with minimal disruption.</p>
+                            <h3>Change Management</h3>
+                            <p>Guiding organizations through structural and cultural transformations.</p>
                         </div>
                         <div className="feature-card">
-                            <h3>Green Building</h3>
-                            <p>Sustainable construction practices for environmentally friendly facilities.</p>
+                            <h3>Financial Advisory</h3>
+                            <p>Expert financial planning and investment strategies for healthcare ventures.</p>
                         </div>
                         <div className="feature-card">
-                            <h3>Project Management</h3>
-                            <p>End-to-end construction management ensuring on-time, on-budget delivery.</p>
+                            <h3>Project Advisory</h3>
+                            <p>End-to-end guidance ensuring on-time, on-budget project delivery.</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="cta-section">
-                    <h2>Build Your Healthcare Vision</h2>
-                    <p>Partner with us for your next healthcare construction project</p>
+                    <h2>Realize Your Healthcare Vision</h2>
+                    <p>Partner with us to transform your healthcare organization</p>
                     <a href="#contact" className="cta-button">Request Consultation</a>
                 </div>
             </div>

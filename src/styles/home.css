@@ -176,7 +176,7 @@ body {
   margin: 0 auto var(--spacing-2xl);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  box-shadow: none;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.1);
   aspect-ratio: 21/9;
@@ -190,7 +190,7 @@ body {
 }
 
 .hero-video-container.clear {
-  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  box-shadow: none;
   transform: scale(1);
 }
 
@@ -390,18 +390,7 @@ body {
   cursor: pointer;
 }
 
-.company-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--primary-gradient);
-  opacity: 0;
-  transition: opacity var(--transition-base);
-  z-index: 0;
-}
+
 
 .company-card:hover {
   transform: translateY(-8px);
@@ -409,9 +398,7 @@ body {
   border-color: rgba(102, 126, 234, 0.3);
 }
 
-.company-card:hover::before {
-  opacity: 0.1;
-}
+
 
 .company-image {
   position: relative;
@@ -453,39 +440,18 @@ body {
 
 .company-tag {
   display: inline-block;
-  padding: var(--spacing-xs) var(--spacing-md);
+  padding: var(--spacing-xs) 0.75rem;
+  /* Reduced horizontal padding */
   background: rgba(102, 126, 234, 0.1);
   border: 1px solid rgba(102, 126, 234, 0.3);
   border-radius: var(--radius-full);
-  font-size: var(--font-size-sm);
+  font-size: 0.8rem;
+  /* Slightly reduced font size */
   color: var(--primary-color);
   font-weight: 500;
 }
 
-/* Gradient Overlays for Different Companies */
-.company-card:nth-child(1)::before {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
 
-.company-card:nth-child(2)::before {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
-
-.company-card:nth-child(3)::before {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.company-card:nth-child(4)::before {
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-}
-
-.company-card:nth-child(5)::before {
-  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-}
-
-.company-card:nth-child(6)::before {
-  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
-}
 
 /* Footer Styles */
 .footer {
@@ -822,7 +788,8 @@ body {
 
 .btn-view {
   display: inline-block;
-  padding: var(--spacing-xs) var(--spacing-md);
+  padding: var(--spacing-xs) 1rem;
+  /* Reduced padding from 1.5rem to 1rem */
   background: rgba(102, 126, 234, 0.1);
   color: var(--primary-color);
   text-decoration: none;
